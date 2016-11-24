@@ -65,13 +65,16 @@ module Elasticsearch
           :term_statistics,
           :field_statistics,
           :fields,
+          :dsf,
           :offsets,
           :positions,
           :payloads,
           :preference,
           :realtime,
           :routing,
-          :parent ]
+          :parent,
+          :filter
+        ]
 
         method = HTTP_GET
         endpoint = arguments.delete(:endpoint) || '_termvectors'
